@@ -13,33 +13,18 @@
 | Model / revision | Barracuda F800, revision `F CCE` <!-- CONFIRM on your unit + say where the label is --> |
 | CPU | Intel Xeon E5-2620 v3 (6 cores / 12 threads, 2.4 GHz) |
 | RAM | 24 GB DDR4 <!-- TO FILL: how many sticks, ECC or not, free slots --> |
-| Storage as shipped | <!-- TO FILL: none / drive removed by seller --> |
-| Storage installed | SATA drive <!-- TO FILL: capacity, 2.5" or 3.5" --> |
-| Copper interfaces | <!-- TO FILL: how many, which controller --> |
-| SFP+ interfaces | 4 × Intel <!-- TO FILL: exact controller, e.g. 82599 / X520 --> |
-| Power supply | <!-- TO FILL: single or redundant --> |
-| Console | Serial port <!-- TO FILL: RJ45 or DB9 --> |
+| Storage as shipped | 430gb SSD SATA |
+| Storage installed | SATA drive 2.5 |
+| Copper interfaces | 16 ports Intel i350   |
+| SFP+ interfaces | 4 × Intel X710 |
+| Power supply | 2 x PSU redondant |
+| Console | Serial port RJ45 in 19200 bauds ( for the BIOS, OPNSENSE listen in 115200 )|
 | Price paid | €150 (eBay, used) |
 
 ## Opening the chassis
 
-<!-- TO FILL:
-     - screw type and where they are
-     - which way the lid slides
-     - anything that catches or needs force
-     - whether a warranty seal has to be broken -->
 
 ![Inside the F800](assets/f800-inside.jpg)
-
-## Storage
-
-The unit arrived without a drive — a common situation with decommissioned appliances, since sellers usually pull the disk for data-protection reasons.
-
-<!-- TO FILL:
-     - drive format accepted (2.5" / 3.5", SATA)
-     - is there a caddy / bracket / rack, or does the drive just sit in place?
-     - were SATA and power cables already present, or did you have to add them?
-     - minimum capacity worth using for OPNsense -->
 
 ## Networking
 
@@ -55,11 +40,8 @@ Port-to-interface mapping is covered in [Networking](05-networking.md).
 
 ## Living with it
 
-**Noise.** Rack-appliance cooling, designed for a datacentre rather than a living room. <!-- TO FILL: how loud in practice, does it quiet down after boot, did you swap the fans? -->
+**Noise.** Rack-appliance cooling, designed for a datacenter rather than a living room. 75 decibels for an usual use
 
-**Power draw.** <!-- TO FILL: measure it at idle and under load — this is a question people always ask -->
-
-**Heat and mounting.** <!-- TO FILL: rack depth, standalone placement, ventilation clearance -->
 
 ## No video output
 
@@ -67,9 +49,9 @@ There is no usable video output during boot. Everything — BIOS, installer, fir
 
 ## What you need before starting
 
-- [ ] Console cable <!-- TO FILL: exact type -->
+- [ ] Console cable RJ45
 - [ ] USB-to-serial adapter
 - [ ] USB stick for the installer (8 GB or more)
 - [ ] A SATA drive
-- [ ] Screwdriver <!-- TO FILL: type -->
+- [ ] Screwdriver 
 - [ ] SFP+ modules or DAC cables, if you plan to use those ports
