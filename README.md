@@ -1,5 +1,3 @@
-# opnsense-barracuda-f800
-OPNsense Setup on Barracuda F800: Serial, BIOS, Port Mapping, Plugins &amp; Troubleshooting. 
 # OPNsense on Barracuda F800
 
 Complete documentation for installing and configuring **OPNsense** on a repurposed **Barracuda NextGen Firewall F800** appliance.
