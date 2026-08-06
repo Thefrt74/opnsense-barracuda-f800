@@ -27,7 +27,7 @@ Good to know: there is no proprietary hardware inside — Intel NICs, an AMI BIO
 
 | Chapter | Topic |
 |---|---|
-| [01 — Hardware](docs/01-materiel.md) | Specifications, teardown, storage, things to watch out for |
+| [01 — Hardware](docs/01-hardware.md) | Specifications, teardown, storage, things to watch out for |
 | [02 — Serial console access](docs/02-acces-serie.md) | Cabling, terminal settings, first steps |
 | [03 — BIOS](docs/03-bios.md) | Entering the BIOS, boot order, serial redirection |
 | [04 — Installing OPNsense](docs/04-installation.md) | Installation media, procedure, pitfalls |
