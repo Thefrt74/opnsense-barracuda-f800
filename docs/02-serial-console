@@ -18,7 +18,8 @@ Locate the console port on the chassis. in front of the firewall
 
 | Setting | Value |
 |---|---|
-| Baud rate | 19200 ( for the barracuda, 115200 for opnsense) |
+| Baud rate ( for the barracuda BIOS) | 19200 |
+| Baud rate ( for opnsense) | 115200 |
 | Data bits | 8 |
 | Parity | None |
 | Stop bits | 1 |
