@@ -6,8 +6,8 @@ The F800 has no usable video output at boot. The BIOS, the OPNsense installer an
 
 | Item | Notes |
 |---|---|
-| Console cable | RJ45
-| USB-to-serial adapter | anything, i use CH340 but i need to use linux
+| Console cable | RJ45 |
+| USB-to-serial adapter | anything, i use CH340 but i need to use linux |
 | Terminal software | PuTTY (Windows), `screen` or `minicom` (Linux/macOS) |
 
 Locate the console port on the chassis. in front of the firewall  
