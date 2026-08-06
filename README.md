@@ -4,6 +4,11 @@ Complete documentation for installing and configuring **OPNsense** on a repurpos
 
 > These appliances now sell cheap on the second-hand market. Under the hood they are plain x86 servers — nothing stops you from running a free operating system on them. Online documentation, however, is scarce and scattered. Hence this repository.
 
+Why this box?
+
+€150 on eBay. For that price you get DDR4 memory, 12 threads and four SFP+ ports — nothing else in that range comes close. The only catch is the vendor firmware, and that's what OPNsense is for.
+
+Good to know: there is no proprietary hardware inside — Intel NICs, an AMI BIOS and an Intel CPU. It's a standard x86 server in a firewall chassis.
 ---
 
 ## The hardware
