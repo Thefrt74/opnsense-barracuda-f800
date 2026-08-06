@@ -9,6 +9,7 @@ Why this box?
 €150 on eBay. For that price you get DDR4 memory, 12 threads and four SFP+ ports — nothing else in that range comes close. The only catch is the vendor firmware, and that's what OPNsense is for.
 
 Good to know: there is no proprietary hardware inside — Intel NICs, an AMI BIOS and an Intel CPU. It's a standard x86 server in a firewall chassis.
+
 ---
 
 ## The hardware
