@@ -6,11 +6,11 @@ The F800 has no usable video output at boot. The BIOS, the OPNsense installer an
 
 | Item | Notes |
 |---|---|
-| Console cable | <!-- TO FILL: RJ45 rollover (Cisco-style) or DB9 null-modem? --> |
-| USB-to-serial adapter | <!-- TO FILL: chipset used (FTDI, Prolific, CH340) — Prolific clones are a classic source of driver pain on Windows --> |
+| Console cable | RJ45
+| USB-to-serial adapter | anything, i use CH340 but i need to use linux
 | Terminal software | PuTTY (Windows), `screen` or `minicom` (Linux/macOS) |
 
-Locate the console port on the chassis. <!-- TO FILL: front or rear, how it is labelled, don't confuse it with the management Ethernet port -->
+Locate the console port on the chassis. in front of the firewall  
 
 ![Console port on the chassis](assets/console-port.jpg)
 
@@ -18,7 +18,7 @@ Locate the console port on the chassis. <!-- TO FILL: front or rear, how it is l
 
 | Setting | Value |
 |---|---|
-| Baud rate | <!-- CONFIRM on your unit: 115200 is the usual value on these appliances, 9600 is the fallback --> |
+| Baud rate | 19200 ( for the barracuda, 115200 for opnsense) |
 | Data bits | 8 |
 | Parity | None |
 | Stop bits | 1 |
@@ -27,6 +27,8 @@ Locate the console port on the chassis. <!-- TO FILL: front or rear, how it is l
 > This table is the single most searched-for piece of information about this appliance. Replace the placeholder with the value you actually observed — not a guess.
 
 Shorthand for `8 data bits, no parity, 1 stop bit` is **8N1**.
+
+You can modify the baud rate in the BIOS. ( tip : set it to 115200 for to match the opnsense default)
 
 ## Connecting
 
