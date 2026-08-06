@@ -1,0 +1,95 @@
+# 02 — Serial console access
+
+The F800 has no usable video output at boot. The BIOS, the OPNsense installer and the first boot all happen over the **serial console**. Get this working before anything else — nothing in the rest of this guide is possible without it.
+
+## What you need
+
+| Item | Notes |
+|---|---|
+| Console cable | <!-- TO FILL: RJ45 rollover (Cisco-style) or DB9 null-modem? --> |
+| USB-to-serial adapter | <!-- TO FILL: chipset used (FTDI, Prolific, CH340) — Prolific clones are a classic source of driver pain on Windows --> |
+| Terminal software | PuTTY (Windows), `screen` or `minicom` (Linux/macOS) |
+
+Locate the console port on the chassis. <!-- TO FILL: front or rear, how it is labelled, don't confuse it with the management Ethernet port -->
+
+![Console port on the chassis](assets/console-port.jpg)
+
+## Terminal settings
+
+| Setting | Value |
+|---|---|
+| Baud rate | <!-- CONFIRM on your unit: 115200 is the usual value on these appliances, 9600 is the fallback --> |
+| Data bits | 8 |
+| Parity | None |
+| Stop bits | 1 |
+| Flow control | None |
+
+> This table is the single most searched-for piece of information about this appliance. Replace the placeholder with the value you actually observed — not a guess.
+
+Shorthand for `8 data bits, no parity, 1 stop bit` is **8N1**.
+
+## Connecting
+
+### Windows (PuTTY)
+
+1. Plug in the USB-to-serial adapter and open **Device Manager**.
+2. Expand **Ports (COM & LPT)** and note the port number, e.g. `COM3`.
+   If the device shows a yellow warning triangle, the driver is missing — install the one matching your adapter's chipset.
+3. Open PuTTY, select **Serial** as connection type.
+4. Enter your COM port in **Serial line** and the baud rate in **Speed**.
+5. Click **Open**.
+
+![PuTTY serial settings](assets/putty-serial.png)
+
+### Linux / macOS
+
+```bash
+# Identify the device
+ls /dev/ttyUSB* /dev/ttyS* 2>/dev/null      # Linux
+ls /dev/tty.usbserial* /dev/tty.usbmodem*   # macOS
+
+# Connect (adjust device and baud rate)
+screen /dev/ttyUSB0 115200
+```
+
+To exit `screen`: `Ctrl+A`, then `K`, then `y`.
+
+If you get a permission error on Linux, add yourself to the `dialout` group and log back in:
+
+```bash
+sudo usermod -aG dialout $USER
+```
+
+An alternative some people find friendlier:
+
+```bash
+minicom -D /dev/ttyUSB0 -b 115200
+```
+
+## What you should see
+
+<!-- TO FILL:
+     - what appears on screen when you power the unit on
+     - how long before the first output shows up
+     - what the POST looks like
+     - what the original Barracuda firmware displays, if the drive is still in place -->
+
+## Nothing on screen?
+
+Work through these in order:
+
+**Wrong baud rate.** The most common cause. Symptom: garbled characters instead of readable text means the speed is wrong but the cable is fine. A completely blank screen usually means something else.
+
+**Wrong cable type.** <!-- TO FILL: what you actually used, and what didn't work -->
+
+**Adapter not recognised.** Check Device Manager (Windows) or `dmesg | tail` (Linux) after plugging it in.
+
+**Connected too late.** Some appliances only emit output during a short window at power-on. Have the terminal open *before* switching the unit on.
+
+**Wrong port.** <!-- TO FILL: is there more than one serial-looking port? -->
+
+<!-- TO FILL: add whatever else cost you time here — this section is why people will find this page -->
+
+---
+
+Next: [BIOS](03-bios.md)
