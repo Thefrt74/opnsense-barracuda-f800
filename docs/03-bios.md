@@ -8,11 +8,11 @@ Everything in this chapter happens over the serial console. If you haven't got t
 
 Connect at **19200 baud** — that's the Barracuda default, not the 115200 you'll use later with OPNsense. At the wrong speed you'll see garbled characters instead of the POST screen.
 
-Press the **DEL** or **ESC** key at the boot
+Press **DEL** or **ESC** at the boot
 
 ![Enter to the BIOS](assets/bios-access.png)
 
-There is a bios password, try **bcndk1**, **BCNDK1**, **322232**, **32232** or **ADMINBN99**
+The BIOS may be password-protected. On this unit **bcndk1** worked. Others reported for Barracuda hardware: BCNDK1, 322232, 32232, ADMINBN99
 
 ![bios-password](assets/bios-password.png)
 
@@ -37,7 +37,7 @@ Set USB first boot order in bios so the OPNsense installer starts.
 ## Other settings worth checking
 
 - [ ] **Restore on AC power loss** — set to *Power On* so the firewall comes back by itself after an outage
-- [ ] **UEFI / Legacy boot mode** — I use UEFI boot mode. The BIOS is " recent " he can support UEFI
+- [ ] **UEFI / Legacy boot mode** — I use UEFI boot mode. The BIOS is recent enough to support UEFI boot.
 
 ## Once OPNsense is installed
 
