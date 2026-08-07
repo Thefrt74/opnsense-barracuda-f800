@@ -76,9 +76,9 @@ Remove the USB stick after the reboot (or the appliance may boot back into the i
 
 The system comes up to the console menu and asks you to assign interfaces. This is where the physical-port-to-interface mapping matters, and it has its own chapter: [Networking](05-networking.md).
 
--assigning WAN / LAN at the console
--the default LAN IP the system lands on
--(default is https://192.168.1.1, user root, the password you just set) -->
+At the console you assign WAN and LAN. The system defaults to the LAN
+address **192.168.1.1** — open <https://192.168.1.1> in a browser and
+log in as **root** with the password you set during install.
 
 
 ---
