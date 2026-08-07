@@ -59,4 +59,4 @@ At first boot, OPNsense walks you through assigning WAN and LAN.
 
 ---
 
-Next: [Plugins](06-plugins.md)
+Next: [Troubleshooting](06-Troubleshooting.md)
