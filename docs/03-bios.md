@@ -14,6 +14,8 @@ Press the **DEL** or **ESC** key at the boot
 
 There is a bios password, try **bcndk1**, **BCNDK1**, **322232**, **32232** or **ADMINBN99**
 
+![bios-password](assets/bios-password.png)
+
 ## Serial redirection settings
 
 This is where you set the console speed. Aligning it with OPNsense saves you from reconnecting at a different baud rate every time you switch between BIOS and the running system.
