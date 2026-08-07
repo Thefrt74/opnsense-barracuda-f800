@@ -20,7 +20,7 @@ This is where you set the console speed. Aligning it with OPNsense saves you fro
 
 !!! tip
     Set the baud rate to **115200** to match the OPNsense default.
-    Go into BIOS ADVANCED ---> Serial Port redirection ---> bits per second 
+    Go into BIOS ADVANCED ---> Serial Port console redirection ---> bits per second 
 ![Serial redirection menu](assets/bios-serial-redirection.png)
 
 ## Boot order
