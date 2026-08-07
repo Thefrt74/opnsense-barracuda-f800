@@ -45,4 +45,4 @@ Remember to put the boot order back to the internal drive, or the appliance will
 
 ---
 
-Next: [Installing OPNsense](04-installation.md)
+Next: [Installing OPNsense](04-installing-opnsense.md)
