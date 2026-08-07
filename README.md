@@ -31,9 +31,8 @@ Good to know: there is no proprietary hardware inside — Intel NICs, an AMI BIO
 | [02 — Serial console access](docs/02-serial-console.md) | Cabling, terminal settings, first steps |
 | [03 — BIOS](docs/03-bios.md) | Entering the BIOS, boot order, serial redirection |
 | [04 — Installing OPNsense](docs/04-installation.md) | Installation media, procedure, pitfalls |
-| [05 — Network and interfaces](docs/05-reseau.md) | Mapping physical ports to system interfaces |
-| [06 — Plugins](docs/06-plugins.md) | CrowdSec and other installed extensions |
-| [07 — Troubleshooting](docs/07-depannage.md) | Problems encountered and how they were solved |
+| [05 — Network and interfaces](docs/05-networking.md) | Mapping physical ports to system interfaces |
+| [06 — Troubleshooting](docs/06-Troubleshooting.md) | Problems encountered and how they were solved |
 
 ## Status
 
