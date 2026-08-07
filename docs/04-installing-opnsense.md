@@ -6,7 +6,7 @@ At this point you should have a working serial console ([chapter 02](02-serial-c
 
 | Item | Value |
 |---|---|
-| OPNsense version | last version works ( 26.7.1 )  |
+| OPNsense version | 26.7.1 (latest at time of install)  |
 | Image type | serial  |
 | Architecture | amd64 |
 
@@ -64,7 +64,7 @@ The live system boots to a login prompt.
 2. The installer starts automatically.
  and you can configure
 set your password with the root user
-set your raid option ( mirror, stripe)
+On a single disk, ZFS runs as a one-disk stripe — mirror needs a second drive.
 
 ### UFS or ZFS?
 
