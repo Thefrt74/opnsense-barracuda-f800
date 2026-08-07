@@ -10,7 +10,7 @@ Connect at **19200 baud** — that's the Barracuda default, not the 115200 you'l
 
 Press the **DEL** or **ESC** key at the boot
 
-![Enter to the BIOS](assets/bios-access.jpg)
+![Enter to the BIOS](assets/bios-access.png)
 
 There is a bios password, try **bcndk1**, **BCNDK1**, **322232**, **32232** or **ADMINBN99**
 
