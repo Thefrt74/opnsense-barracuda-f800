@@ -51,10 +51,11 @@ At first boot, OPNsense walks you through assigning WAN and LAN.
 
 !! If you want modify the interface
 
-Go on the serial console
+-Go on the serial console
 
-login
-and click on 1 to assign interface and change it
+-login
+
+-click on 1 to assign interface and change it
 
 ---
 
