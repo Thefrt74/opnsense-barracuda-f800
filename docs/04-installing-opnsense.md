@@ -6,8 +6,8 @@ At this point you should have a working serial console ([chapter 02](02-serial-c
 
 | Item | Value |
 |---|---|
-| OPNsense version | <!-- TO FILL --> |
-| Image type | serial <!-- CONFIRM: serial is the right one here — see below --> |
+| OPNsense version | last version works ( 26.7.1 )  |
+| Image type | serial  |
 | Architecture | amd64 |
 | Install date | <!-- TO FILL --> |
 
@@ -21,7 +21,7 @@ Get the image from the official mirror list: <https://opnsense.org/download/>
 - Image type: **serial (Serial Console)** — not VGA, not Nano
 - Verify the download against the published checksum before writing it.
 
-<!-- TO FILL: which mirror you used, and the exact filename you downloaded -->
+I use default mirror by opnsense.
 
 ## Writing the USB stick
 
@@ -53,10 +53,7 @@ Use **Rufus** or **balenaEtcher**. Etcher handles the `.bz2` directly; with Rufu
 2. Have the serial console open at **115200 baud** (the OPNsense image speed — not the 19200 you used for the Barracuda BIOS).
 3. Power on. Enter the boot menu or let the changed boot order pick up the USB stick.
 
-<!-- TO FILL:
-     - what the boot sequence looks like over serial
-     - how long before the OPNsense loader appears
-     - anything that stalled -->
+Wait a moment while OPNsense boots. Once it's done, you're in the OPNsense serial installer.
 
 ## Running the installer
 
@@ -66,20 +63,13 @@ The live system boots to a login prompt.
    - user: `installer`
    - password: `opnsense`
 2. The installer starts automatically.
-
-<!-- TO FILL, step by step as you actually saw it:
-     - keymap selection
-     - install type: which one did you pick? (see note below)
-     - target disk selection — the SATA drive you added
-     - swap / mirror options
-     - root password
-     - completion + reboot -->
+ and you can configure
+set your password with the root user
+set your raid option ( mirror, stripe)
 
 ### UFS or ZFS?
 
-<!-- TO FILL: which you chose and why.
-     ZFS gives you snapshots and checksumming but wants a bit more RAM —
-     no problem on 24 GB. On a single disk, ZFS is still worth it here. -->
+For this build I chose ZFS. It's more resilient against data corruption, and its snapshot feature lets you roll back a bad change. Snapshots use a bit more RAM, but with 24 GB on this machine that's a non-issue.
 
 ## First boot
 
@@ -87,19 +77,11 @@ Remove the USB stick after the reboot (or the appliance may boot back into the i
 
 The system comes up to the console menu and asks you to assign interfaces. This is where the physical-port-to-interface mapping matters, and it has its own chapter: [Networking](05-networking.md).
 
-<!-- TO FILL:
-     - assigning WAN / LAN at the console
-     - the default LAN IP the system lands on
-     - how you reached the web UI for the first time
-       (default is https://192.168.1.1, user root, the password you just set) -->
+-assigning WAN / LAN at the console
+-the default LAN IP the system lands on
+-how you reached the web UI for the first time
+-(default is https://192.168.1.1, user root, the password you just set) -->
 
-## Pitfalls
-
-<!-- TO FILL — the payoff section. Anything that didn't work first time:
-     - installer not appearing over serial (wrong baud?)
-     - USB stick not detected
-     - disk not detected (SATA mode in BIOS — see chapter 03)
-     - system booting back into the installer -->
 
 ---
 
