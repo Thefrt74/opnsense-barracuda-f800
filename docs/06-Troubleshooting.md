@@ -1,4 +1,4 @@
-# 07 — Troubleshooting
+# 06 — Troubleshooting
 
 A running log of problems and their fixes. Format: **symptom → cause → fix**. Write everything down, even what feels obvious now — this is the page someone lands on at 2 a.m. when nothing works.
 
