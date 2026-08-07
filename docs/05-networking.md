@@ -9,7 +9,7 @@ OPNsense is built on FreeBSD, so interfaces are named after their driver, not by
 | Driver | Hardware |
 |---|---|
 | `igb` | Intel 1 GbE (i210 / i350 family) |
-| `ix` | Intel 10 GbE SFP+ (82599 / Intel X710 ) |
+| `ixl` | Intel 10 GbE SFP+ (82599 / Intel X710 ) |
 | `em` | Intel 1 GbE (older 8254x family) |
 
 So a copper gigabit port shows up as `igb0`, `igb1`… and an SFP+ port as `ix0`, `ix1`…
