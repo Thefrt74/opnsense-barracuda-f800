@@ -79,7 +79,6 @@ The system comes up to the console menu and asks you to assign interfaces. This 
 
 -assigning WAN / LAN at the console
 -the default LAN IP the system lands on
--how you reached the web UI for the first time
 -(default is https://192.168.1.1, user root, the password you just set) -->
 
 
