@@ -9,7 +9,6 @@ At this point you should have a working serial console ([chapter 02](02-serial-c
 | OPNsense version | last version works ( 26.7.1 )  |
 | Image type | serial  |
 | Architecture | amd64 |
-| Install date | <!-- TO FILL --> |
 
 > **Use the `serial` image, not `vga`.** With no usable video output, a `vga` image leaves you staring at a frozen screen with no way to interact. The `serial` image sends everything over the console at 115200 baud.
 
