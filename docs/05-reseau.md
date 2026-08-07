@@ -14,10 +14,6 @@ OPNsense is built on FreeBSD, so interfaces are named after their driver, not by
 
 So a copper gigabit port shows up as `igb0`, `igb1`… and an SFP+ port as `ix0`, `ix1`…
 
-<!-- TO FILL: confirm which drivers actually appear on your F800.
-     You can read them at the console with `ifconfig` or in the web UI
-     under Interfaces > Overview / Assignments. -->
-
 ## Physical port → interface mapping
 
 **This is the table that matters.** Fill it in for your unit.
@@ -45,39 +41,18 @@ Do them one at a time — plug everything in at once and you can't tell which is
 
 The four SFP+ cages are the reason this box is worth buying.
 
-<!-- TO FILL:
-     - which SFP+ modules were recognised (brand + part number)
-     - which were rejected — Intel NICs sometimes refuse non-Intel optics
-     - DAC (direct-attach copper) cables: worked or not?
-     - link speed negotiated (10G? did it fall back to 1G?)
-     - did you need to force media/speed anywhere? -->
 
 > Intel `ix` controllers have a history of refusing third-party optics unless a kernel tunable is set. If you hit this, note the exact tunable that fixed it — that alone is worth the page.
 
 ## Assigning interfaces
 
 At first boot, OPNsense walks you through assigning WAN and LAN.
+ Default ports is **ixl0** and **ixl1**
 
-<!-- TO FILL:
-     - which physical port you chose for WAN, which for LAN
-     - whether you set up VLANs at this stage
-     - the console assignment dialog, briefly -->
-
-## Base configuration
-
-<!-- TO FILL — GENERIC VALUES ONLY. Your real addressing plan, firewall
-     rules and VPN config belong in a PRIVATE repo, never here.
-     Safe to document:
-     - WAN: DHCP or static (describe the method, not your real IP)
-     - LAN: subnet used (use documentation ranges like 192.0.2.0/24)
-     - VLAN approach in principle, not your real VLAN IDs
-     - DHCP server, DNS resolver — settings, not secrets -->
-
-## Network diagram
-
-<!-- Generic / anonymised version only. -->
-
-![Network diagram](assets/network-diagram.png)
+!! If you want modify the interface
+Go on the serial console
+login
+and click on 1 to assign interface and change it
 
 ---
 
