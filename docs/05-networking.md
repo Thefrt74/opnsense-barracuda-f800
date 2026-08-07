@@ -22,8 +22,8 @@ So a copper gigabit port shows up as `igb0`, `igb1`… and an SFP+ port as `ix0`
 |---|---|---|---|---|
 | <!-- e.g. p1 --> | `igb0` | 1 GbE copper | `igb` | WAN |
 | | `igb1` | 1 GbE copper | `igb` | LAN |
-| | `ix0` | 10 GbE SFP+ | `ix` | |
-| | `ix1` | 10 GbE SFP+ | `ix` | |
+| | `ixl0` | 10 GbE SFP+ | `ix` | |
+| | `ixl1` | 10 GbE SFP+ | `ix` | |
 | | | | | |
 
 ### How to build this table
@@ -47,9 +47,9 @@ The four SFP+ cages are the reason this box is worth buying.
 ## Assigning interfaces
 
 At first boot, OPNsense walks you through assigning WAN and LAN.
- Default ports is **ixl0** and **ixl1**
+The default WAN/LAN are assigned to **ixl0** and **ixl1**
 
-!! If you want modify the interface
+!! To reassign the interfaces:
 
 -Go on the serial console
 
