@@ -52,15 +52,5 @@ The CH340 adapter needed Linux to be recognised on this build
 
 ---
 
-## <!-- next problem -->
 
-**Symptom:**
-
-**Cause:**
-
-**Fix:**
-
----
-
-## Starting over
 
