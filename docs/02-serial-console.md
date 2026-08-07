@@ -12,7 +12,7 @@ The F800 has no usable video output at boot. The BIOS, the OPNsense installer an
 
 Locate the console port on the chassis. in front of the firewall  
 
-![Console port on the chassis](assets/console-port.jpg)
+![Console port on the chassis](assets/console-port.png)
 
 ## Terminal settings
 
