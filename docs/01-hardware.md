@@ -15,10 +15,10 @@
 | RAM | 24 GB DDR4 <!-- TO FILL: how many sticks, ECC or not, free slots --> |
 | Storage as shipped | 430gb SSD SATA |
 | Storage installed | SATA drive 2.5 |
-| Copper interfaces | 16 ports Intel i350   |
-| SFP+ interfaces | 4 × Intel X710 |
-| Power supply | 2 x PSU redondant |
-| Console | Serial port RJ45 in 19200 bauds ( for the BIOS, OPNSENSE listen in 115200 )|
+| Copper interfaces | 16 ports (Intel i350)  |
+| SFP+ interfaces | 4 × (Intel X710) |
+| Power supply | 2 x PSU (redundant) |
+| Console | Serial port RJ45 in 19200 baud ( for the BIOS, OPNSENSE listen in 115200 )|
 | Price paid | €150 (eBay, used) |
 
 ## Opening the chassis
@@ -30,17 +30,12 @@
 
 The four SFP+ ports are the main reason this box is worth the money at this price.
 
-<!-- TO FILL:
-     - which SFP+ modules were recognised
-     - which ones were rejected (vendor locking?)
-     - DAC cables: working or not
-     - negotiated link speeds -->
 
 Port-to-interface mapping is covered in [Networking](05-networking.md).
 
 ## Living with it
 
-**Noise.** Rack-appliance cooling, designed for a datacenter rather than a living room. 75 decibels for an usual use
+**Noise.** Rack-appliance cooling, designed for a datacenter rather than a living room. Around 75 decibels in normal use
 
 
 ## No video output
