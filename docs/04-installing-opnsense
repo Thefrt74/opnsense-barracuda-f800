@@ -1,0 +1,106 @@
+# 04 — Installing OPNsense
+
+At this point you should have a working serial console ([chapter 02](02-serial-console.md)) and a BIOS set to boot from USB ([chapter 03](03-bios.md)). This chapter covers writing the installer, booting it, and getting through the installation itself.
+
+## Version installed
+
+| Item | Value |
+|---|---|
+| OPNsense version | <!-- TO FILL --> |
+| Image type | serial <!-- CONFIRM: serial is the right one here — see below --> |
+| Architecture | amd64 |
+| Install date | <!-- TO FILL --> |
+
+> **Use the `serial` image, not `vga`.** With no usable video output, a `vga` image leaves you staring at a frozen screen with no way to interact. The `serial` image sends everything over the console at 115200 baud.
+
+## Downloading the image
+
+Get the image from the official mirror list: <https://opnsense.org/download/>
+
+- Architecture: **amd64**
+- Image type: **serial (Serial Console)** — not VGA, not Nano
+- Verify the download against the published checksum before writing it.
+
+<!-- TO FILL: which mirror you used, and the exact filename you downloaded -->
+
+## Writing the USB stick
+
+The image comes compressed (`.img.bz2`) and must be decompressed first.
+
+### Linux / macOS
+
+```bash
+# Decompress
+bzip2 -d OPNsense-XX.X-serial-amd64.img.bz2
+
+# Identify the target device — CHECK THIS CAREFULLY before writing
+lsblk                        # Linux
+diskutil list                # macOS
+
+# Write it (replace sdX / diskN with your actual device)
+sudo dd if=OPNsense-XX.X-serial-amd64.img of=/dev/sdX bs=1M status=progress conv=fsync   # Linux
+```
+
+> ⚠️ `dd` writes to whatever device you name, with no confirmation. Point it at the wrong disk and you wipe it. Double-check with `lsblk` / `diskutil list` that you have the USB stick and not your system drive.
+
+### Windows
+
+Use **Rufus** or **balenaEtcher**. Etcher handles the `.bz2` directly; with Rufus, decompress first with 7-Zip. Select the image, select the USB stick, write.
+
+## Booting the installer
+
+1. Plug the USB stick into the appliance.
+2. Have the serial console open at **115200 baud** (the OPNsense image speed — not the 19200 you used for the Barracuda BIOS).
+3. Power on. Enter the boot menu or let the changed boot order pick up the USB stick.
+
+<!-- TO FILL:
+     - what the boot sequence looks like over serial
+     - how long before the OPNsense loader appears
+     - anything that stalled -->
+
+## Running the installer
+
+The live system boots to a login prompt.
+
+1. Log in with the installer account:
+   - user: `installer`
+   - password: `opnsense`
+2. The installer starts automatically.
+
+<!-- TO FILL, step by step as you actually saw it:
+     - keymap selection
+     - install type: which one did you pick? (see note below)
+     - target disk selection — the SATA drive you added
+     - swap / mirror options
+     - root password
+     - completion + reboot -->
+
+### UFS or ZFS?
+
+<!-- TO FILL: which you chose and why.
+     ZFS gives you snapshots and checksumming but wants a bit more RAM —
+     no problem on 24 GB. On a single disk, ZFS is still worth it here. -->
+
+## First boot
+
+Remove the USB stick after the reboot (or the appliance may boot back into the installer).
+
+The system comes up to the console menu and asks you to assign interfaces. This is where the physical-port-to-interface mapping matters, and it has its own chapter: [Networking](05-networking.md).
+
+<!-- TO FILL:
+     - assigning WAN / LAN at the console
+     - the default LAN IP the system lands on
+     - how you reached the web UI for the first time
+       (default is https://192.168.1.1, user root, the password you just set) -->
+
+## Pitfalls
+
+<!-- TO FILL — the payoff section. Anything that didn't work first time:
+     - installer not appearing over serial (wrong baud?)
+     - USB stick not detected
+     - disk not detected (SATA mode in BIOS — see chapter 03)
+     - system booting back into the installer -->
+
+---
+
+Next: [Networking and interfaces](05-networking.md)
