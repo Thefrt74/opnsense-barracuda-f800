@@ -7,10 +7,10 @@ The F800 has no usable video output at boot. The BIOS, the OPNsense installer an
 | Item | Notes |
 |---|---|
 | Console cable | RJ45 |
-| USB-to-serial adapter | anything, i use CH340 but i need to use linux |
+| USB-to-serial adapter | Any adapter works. I used a CH340, which was only recognised under Linux |
 | Terminal software | PuTTY (Windows), `screen` or `minicom` (Linux/macOS) |
 
-Locate the console port on the chassis. in front of the firewall  
+The console port is on the front of the appliance.
 
 ![Console port on the chassis](assets/console-port.png)
 
@@ -29,7 +29,7 @@ Locate the console port on the chassis. in front of the firewall
 
 Shorthand for `8 data bits, no parity, 1 stop bit` is **8N1**.
 
-You can modify the baud rate in the BIOS. ( tip : set it to 115200 for to match the opnsense default)
+You can modify the baud rate in the BIOS. ( tip : set it to 115200 to match the opnsense default)
 
 ## Connecting
 
