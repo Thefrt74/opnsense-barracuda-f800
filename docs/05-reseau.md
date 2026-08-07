@@ -50,7 +50,9 @@ At first boot, OPNsense walks you through assigning WAN and LAN.
  Default ports is **ixl0** and **ixl1**
 
 !! If you want modify the interface
+
 Go on the serial console
+
 login
 and click on 1 to assign interface and change it
 
