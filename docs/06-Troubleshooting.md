@@ -24,9 +24,8 @@ A running log of problems and their fixes. Format: **symptom → cause → fix**
 - connected too late (some appliances only emit during a short window at power-on)
 
 **Fix:**
-<!-- TO FILL with what actually worked for you.
-     The CH340 adapter needed Linux to be recognised on this build —
-     note that if Windows gave you trouble. -->
+
+The CH340 adapter needed Linux to be recognised on this build 
 
 ---
 
@@ -50,15 +49,6 @@ A running log of problems and their fixes. Format: **symptom → cause → fix**
 
 ---
 
-## SFP+ module not recognised
-
-**Symptom:** an SFP+ port stays down with a module inserted.
-
-**Cause:** Intel `ix` controllers sometimes reject third-party optics.
-
-**Fix:**
-<!-- TO FILL: the tunable or workaround that fixed it for you,
-     or which modules you switched to. See chapter 05. -->
 
 ---
 
@@ -74,5 +64,3 @@ A running log of problems and their fixes. Format: **symptom → cause → fix**
 
 ## Starting over
 
-<!-- TO FILL: how to wipe and reinstall cleanly if everything is broken —
-     re-flashing from USB, resetting config to defaults from the console menu. -->
